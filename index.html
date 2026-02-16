@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Petite question ❤️</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 100px;
+        background: #f7f7f7;
+    }
+    h1 {
+        margin-bottom: 40px;
+    }
+    button {
+        font-size: 20px;
+        padding: 10px 25px;
+        margin: 20px;
+        cursor: pointer;
+        position: relative;
+    }
+    #non {
+        position: absolute;
+    }
+    #result {
+        margin-top: 40px;
+    }
+    img {
+        max-width: 300px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Est-ce que tu veux qu’on se remette ensemble ? ❤️</h1>
+
+<button onclick="oui()">OUI 😍</button>
+<button id="non" onmouseover="bouge()">NON 😅</button>
+
+<div id="result"></div>
+
+<script>
+function bouge() {
+    const non = document.getElementById("non");
+    const x = Math.random() * 300;
+    const y = Math.random() * 300;
+    non.style.left = x + "px";
+    non.style.top = y + "px";
+}
+
+function oui() {
+    document.getElementById("result").innerHTML = `
+        <h2>🥰 J’étais sûr !</h2>
+        <img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" alt="heureux">
+    `;
+}
+</script>
+
+</body>
+</html>
